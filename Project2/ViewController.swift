@@ -41,7 +41,15 @@ class ViewController: UIViewController {
         var message: String
         var action: String
 
-        totalQuestion += 1
+        if sender.tag == correctAnswer {
+            title = "Correct!"
+            message = "That was good answer, Your score is \(score + 1)"
+            score += 1
+        } else {
+            title = "Wrong!"
+            message = "Wrong! That's the flag of \(countries[sender.tag].uppercased())"
+            score -= 1
+        }
 
         if totalQuestion == 10 {
             title = "Your Result of 10 Question"
@@ -52,18 +60,7 @@ class ViewController: UIViewController {
             totalQuestion = 0
             
         } else {
-            
             action = "CONTINUE"
-            
-            if sender.tag == correctAnswer {
-                title = "Correct!"
-                message = "That was good answer, Your score is \(score + 1)"
-                score += 1
-            } else {
-                title = "Wrong!"
-                message = "Wrong! That's the flag of \(countries[sender.tag].uppercased())"
-                score -= 1
-            }
         }
         
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -86,6 +83,8 @@ class ViewController: UIViewController {
         
         title = "\(countries[correctAnswer].uppercased()) / SCORE: \(score)"
 
+        totalQuestion += 1
+        
     }
 
 }
