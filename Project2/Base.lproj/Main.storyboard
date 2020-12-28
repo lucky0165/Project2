@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qrw-TV-CYu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="8Vc-Sb-6az">
+            <objects>
+                <viewController id="FsL-cz-NgA" customClass="ViewController" customModule="Project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cfd-Qg-L4o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzI-AG-FQe">
+                                <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <state key="normal" image="ireland"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="FsL-cz-NgA" eventType="touchUpInside" id="Xdv-8u-ALr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvb-wp-UTl">
+                                <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <state key="normal" image="nigeria"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="FsL-cz-NgA" eventType="touchUpInside" id="0ou-WM-SRI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5U-4l-nTB">
+                                <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <state key="normal" image="spain"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="FsL-cz-NgA" eventType="touchUpInside" id="phu-a8-jUQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BFR-XJ-dFv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zvb-wp-UTl" firstAttribute="centerX" secondItem="zzI-AG-FQe" secondAttribute="centerX" id="IBg-Jg-USW"/>
+                            <constraint firstItem="zvb-wp-UTl" firstAttribute="top" secondItem="zzI-AG-FQe" secondAttribute="bottom" constant="30" id="Q7a-wU-l2L"/>
+                            <constraint firstItem="d5U-4l-nTB" firstAttribute="centerX" secondItem="zvb-wp-UTl" secondAttribute="centerX" id="S9p-vC-WIc"/>
+                            <constraint firstItem="zzI-AG-FQe" firstAttribute="centerX" secondItem="BFR-XJ-dFv" secondAttribute="centerX" id="qdE-KM-UxI"/>
+                            <constraint firstItem="zzI-AG-FQe" firstAttribute="top" secondItem="BFR-XJ-dFv" secondAttribute="top" constant="12" id="sVZ-qw-K1f"/>
+                            <constraint firstItem="d5U-4l-nTB" firstAttribute="top" secondItem="zvb-wp-UTl" secondAttribute="bottom" constant="30" id="ufE-dK-aD0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0vT-lk-Y6U"/>
+                    <connections>
+                        <outlet property="button1" destination="zzI-AG-FQe" id="zic-I4-fy0"/>
+                        <outlet property="button2" destination="zvb-wp-UTl" id="FCQ-wE-p6L"/>
+                        <outlet property="button3" destination="d5U-4l-nTB" id="0Ao-6h-GNb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxH-EW-l1k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n0z-0X-Tyu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qrw-TV-CYu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qak-SZ-iW5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FsL-cz-NgA" kind="relationship" relationship="rootViewController" id="hdW-nC-dgW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V8C-h1-xfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ireland" width="200" height="100"/>
+        <image name="nigeria" width="200" height="100"/>
+        <image name="spain" width="200" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
