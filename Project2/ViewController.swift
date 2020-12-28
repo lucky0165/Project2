@@ -39,43 +39,38 @@ class ViewController: UIViewController {
         
         var title: String
         var message: String
-        
+        var action: String
+
         totalQuestion += 1
-        
-        if sender.tag == correctAnswer {
-            title = "Correct!"
-            message = "That was good answer, Your score is \(score + 1)"
-            score += 1
+
+        if totalQuestion == 10 {
+            title = "Your Result of 10 Question"
+            message = "You have \(score) good answer!"
+            action = "AGAIN"
+            
+            score = 0
+            totalQuestion = 0
+            
         } else {
-            title = "Wrong!"
-            message = "Wrong! That's the flag of \(countries[sender.tag].uppercased())"
-            score -= 1
+            
+            action = "CONTINUE"
+            
+            if sender.tag == correctAnswer {
+                title = "Correct!"
+                message = "That was good answer, Your score is \(score + 1)"
+                score += 1
+            } else {
+                title = "Wrong!"
+                message = "Wrong! That's the flag of \(countries[sender.tag].uppercased())"
+                score -= 1
+            }
         }
         
-        if totalQuestion == 10 {
-            let alert = UIAlertController(title: "FINAL SCORE", message: "You have  \(score) good answer.", preferredStyle: .alert)
-            
-            let action = UIAlertAction(title: "AGAIN", style: .default) { (action) in
-                
-                self.score = 0
-                self.totalQuestion = 0
-                
-                self.askQuestion()
-                
-            }
-            
-            alert.addAction(action)
-            present(alert, animated: true, completion: nil)
-            
-        } else {
-            
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+        ac.addAction(UIAlertAction(title: action, style: .default, handler: askQuestion))
         
         present(ac, animated: true)
-        }
-
         
     }
     
