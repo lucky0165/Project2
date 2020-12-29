@@ -33,6 +33,19 @@ class ViewController: UIViewController {
 
         askQuestion()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(showPoints))
+        
+    }
+    
+    @objc func showPoints() {
+        
+        let alert = UIAlertController(title: "Currently you have:", message: "\(score) SCORE!", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
