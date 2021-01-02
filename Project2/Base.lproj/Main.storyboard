@@ -18,6 +18,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzI-AG-FQe">
                                 <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zzI-AG-FQe" secondAttribute="height" multiplier="2:1" id="P6A-nU-64k"/>
+                                </constraints>
                                 <state key="normal" image="ireland"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="FsL-cz-NgA" eventType="touchUpInside" id="Xdv-8u-ALr"/>
@@ -25,6 +28,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvb-wp-UTl">
                                 <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zvb-wp-UTl" secondAttribute="height" multiplier="2:1" id="QQ2-EP-QdV"/>
+                                </constraints>
                                 <state key="normal" image="nigeria"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="FsL-cz-NgA" eventType="touchUpInside" id="0ou-WM-SRI"/>
@@ -32,6 +38,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5U-4l-nTB">
                                 <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d5U-4l-nTB" secondAttribute="height" multiplier="2:1" id="sGW-py-9Sz"/>
+                                </constraints>
                                 <state key="normal" image="spain"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="FsL-cz-NgA" eventType="touchUpInside" id="phu-a8-jUQ"/>
@@ -42,11 +51,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zvb-wp-UTl" firstAttribute="centerX" secondItem="zzI-AG-FQe" secondAttribute="centerX" id="IBg-Jg-USW"/>
+                            <constraint firstItem="zvb-wp-UTl" firstAttribute="height" secondItem="zzI-AG-FQe" secondAttribute="height" id="Lwi-o0-EzQ"/>
                             <constraint firstItem="zvb-wp-UTl" firstAttribute="top" secondItem="zzI-AG-FQe" secondAttribute="bottom" constant="30" id="Q7a-wU-l2L"/>
                             <constraint firstItem="d5U-4l-nTB" firstAttribute="centerX" secondItem="zvb-wp-UTl" secondAttribute="centerX" id="S9p-vC-WIc"/>
+                            <constraint firstItem="d5U-4l-nTB" firstAttribute="height" secondItem="zvb-wp-UTl" secondAttribute="height" id="TDz-3M-0Md"/>
                             <constraint firstItem="zzI-AG-FQe" firstAttribute="centerX" secondItem="BFR-XJ-dFv" secondAttribute="centerX" id="qdE-KM-UxI"/>
                             <constraint firstItem="zzI-AG-FQe" firstAttribute="top" secondItem="BFR-XJ-dFv" secondAttribute="top" constant="12" id="sVZ-qw-K1f"/>
                             <constraint firstItem="d5U-4l-nTB" firstAttribute="top" secondItem="zvb-wp-UTl" secondAttribute="bottom" constant="30" id="ufE-dK-aD0"/>
+                            <constraint firstItem="BFR-XJ-dFv" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="d5U-4l-nTB" secondAttribute="bottom" constant="20" id="xIk-BM-iBd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0vT-lk-Y6U"/>
